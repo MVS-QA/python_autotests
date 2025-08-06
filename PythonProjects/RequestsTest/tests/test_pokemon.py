@@ -6,7 +6,7 @@ URL = 'https://api.pokemonbattle.ru/v2'
 TOKEN = 'd0e229379087b58ccc7bff2b4d587672'
 HEADER = {'Content-Type' : 'application/json', 'trainer_token' : TOKEN
 }
-Trainer_id = '41750'
+Trainer_id = 41750
 
 '''def test_status_code():
 	response = requests.get (url = f'{URL}/pokemons', headers = {'trainer_id' : Trainer_id} )
@@ -40,4 +40,5 @@ def test_status_code():
 
 def test_part_of_response():
     response_get = requests.get(url = f'{url}/trainers', params = {'trainer_id' : Trainer_id})
+
     assert response_get.json()["data"][0]["trainer_name"] == 'тренер'
