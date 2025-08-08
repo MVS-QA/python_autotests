@@ -2,7 +2,7 @@ import requests
 import pytest
 
 URL = 'https://api.pokemonbattle.ru/v2'
-TOKEN = 'd0e229379087b58ccc7bff2b4d587672'
+TOKEN = '[тут токен тренера]'
 HEADER = {'Content-Type' : 'application/json', 'trainer_token' : TOKEN
 }
 
@@ -55,4 +55,5 @@ print(response_change_pokemon_name.text)
 
 #поймать покемона в покебол
 respons_pokemon_add_pokeball = requests.post (url = f'{URL}/trainers/add_pokeball', headers = HEADER , json = body_add_pokeball)
+
 print(respons_pokemon_add_pokeball.text)
